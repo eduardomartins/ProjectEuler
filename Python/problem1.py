@@ -1,4 +1,4 @@
-#  problem1.rb
+#  problem1.py
 #  
 #  Copyright 2014 Eduardo Sant' Anna Martins <eduardomartins1993@gmail.com>
 #  
@@ -23,13 +23,27 @@
 #  Problem: 1
 #  Exercise: If we list all the natural numbers below 10 that are multiples 
 #  of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.Find 
-#  the sum of all the multiples of 3 or 5 below 1000.
+#  the sum of all the multiples of 3 or 5 below 1000, 10000, 100000, 10000000, 10000000.
 #
 
-class Sum
-	def inicialize(int, last)
-		for 
-	end
-end
+def maiorMultiplo(num, maximo):
+	if(maximo >= num):
+		if(maximo % num == 0):
+			return maximo
+		else:
+			return maiorMultiplo(num, maximo - 1)
+	else:
+		return 0
 
-x = Sum.new
+def somaNumeriaca(a1, an, n):
+	return ((a1 + an) * n)/2
+
+def main():
+	maximo = input()
+	maior3 = maiorMultiplo(3, maximo)
+	maior5 = maiorMultiplo(5, maximo)
+	maior15 = maiorMultiplo(15, maximo)
+	print somaNumeriaca(3, maior3, maior3/3) + somaNumeriaca(5, maior5, maior5/5) - somaNumeriaca(15, maior15, maior15/15)
+
+main()
+	
