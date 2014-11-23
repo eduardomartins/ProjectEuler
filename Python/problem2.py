@@ -3,7 +3,7 @@
 #
 #  problem2.py
 #  
-#  Copyright 2014 Eduardo Sant Anna Martins <eduardomartins993@hotmail.com>
+#  Copyright 2014 Eduardo Sant'Anna Martins <eduardomartins993@hotmail.com>
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -31,21 +31,20 @@
 
 
 def sumfibonacci():
-	a1 = an = aux = 1
-	sm = 0
-	while (an < 4E6):
-		if(an % 2 == 0):
-			sm += an
+    a1 = an = 1
+    sm = 0
+    while an < 4E6:
+        if an % 2 == 0:
+            sm += an
+        an += an
+        a1 = an - a1
+    return sm
 
-		an += an
-		a1 = an - a1
-
-	return sm 
 
 def main():
-	print sumfibonacci();
-	return 0
+    print sumfibonacci()
+    return 0
 
 if __name__ == '__main__':
-	main()
+    main()
 
