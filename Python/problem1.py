@@ -3,7 +3,7 @@
 #
 #  problem1.py
 #  
-#  Copyright 2014 Eduardo Sant' Anna Martins <eduardomartins993@hotmail.com>
+#  Copyright 2014 Eduardo Sant'Anna Martins <eduardomartins993@hotmail.com>
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -29,28 +29,30 @@
 #  the sum of all the multiples of 3 or 5 below 1000
 #
 
-def maiorMultiplo(num, maximo):
-	if(maximo >= num):
-		if(maximo % num == 0):
-			return maximo
-		else:
-			return maiorMultiplo(num, maximo - 1)
-	else:
-		return 0
 
-def somaNumeriaca(a1, an, n):
-	return ((a1 + an) * n)/2
+def maior_multiplo(num, maximo):
+    if maximo >= num:
+        if maximo % num == 0 :
+            return maximo
+        else:
+            return maior_multiplo(num, maximo - 1)
+    else:
+        return 0
+
+
+def soma_numeriaca(a1, an, n):
+    return ((a1 + an) * n)/2
+
 
 def main():
-	maximo = 1000000000
-	maior3 = maiorMultiplo(3, maximo)
-	maior5 = maiorMultiplo(5, maximo)
-	maior15 = maiorMultiplo(15, maximo)
-	
-	print somaNumeriaca(3, maior3, maior3/3) + somaNumeriaca(5, maior5, maior5/5) - somaNumeriaca(15, maior15, maior15/15)
-	
-	return 0
+    maximo = 1000000000
+    maior3 = maior_multiplo(3, maximo)
+    maior5 = maior_multiplo(5, maximo)
+    maior15 = maior_multiplo(15, maximo)
+
+    print soma_numeriaca(3, maior3, maior3/3) + soma_numeriaca(5, maior5, maior5/5) - soma_numeriaca(15, maior15, maior15/15)
+
+    return 0
 
 if __name__ == '__main__':
-	main()
-	
+    main()
