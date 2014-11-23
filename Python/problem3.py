@@ -40,7 +40,6 @@ def prime(n):
 def largest_prime_factor(n):
     k = 2
     while k <= n:
-        print n, k
         if prime(k) and n % k == 0:
             n /= k
             if n == 1:
