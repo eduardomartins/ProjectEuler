@@ -26,10 +26,26 @@
 #  the sum of all the multiples of 3 or 5 below 1000.
 #
 
-class Sum
-	def inicialize(int, last)
-		for 
+def sum(first, last, n)
+	return ((first + last) * n)/2
+end
+
+def largest(n, max)
+	if max  >= n then
+		if max % n == 0 then
+			return max
+		else
+			return largest(n, max-1)
+		end
+	else
+		return n
 	end
 end
 
-x = Sum.new
+def main()
+	n1, n2, n3, max = 3, 5, 15, 999
+	l1, l2, l3 = largest(n1, max), largest(n2, max), largest(n3, max) 
+	print sum(n1, l1, l1/n1) + sum(n2, l2, l2/n2) - sum(n3, l3, l3/n3), "\n"
+end
+
+main()
