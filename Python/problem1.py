@@ -32,7 +32,7 @@
 
 def maior_multiplo(num, maximo):
     if maximo >= num:
-        if maximo % num == 0 :
+        if maximo % num == 0:
             return maximo
         else:
             return maior_multiplo(num, maximo - 1)
