@@ -33,7 +33,7 @@ def greatest_common_divisor(a, b, *args):
         args = list(args)
         return greatest_common_divisor(greatest_common_divisor(a, b), args.pop(0), *args)
     elif b == 0:
-            return a
+        return a
     else:
         return greatest_common_divisor(b, a % b)
 
@@ -46,9 +46,7 @@ def least_common_multiple(*args):
 
 
 def main():
-    multiple = least_common_multiple(*range(1, 21))
-
-    print multiple
+    print least_common_multiple(*range(1, 21))
     return 0
 
 
