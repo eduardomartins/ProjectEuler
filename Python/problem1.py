@@ -40,7 +40,7 @@ def maior_multiplo(num, maximo):
         return 0
 
 
-def soma_numeriaca(a1, an, n):
+def soma_numerica(a1, an, n):
     return ((a1 + an) * n)/2
 
 
@@ -50,7 +50,7 @@ def main():
     maior5 = maior_multiplo(5, maximo)
     maior15 = maior_multiplo(15, maximo)
 
-    print soma_numeriaca(3, maior3, maior3/3) + soma_numeriaca(5, maior5, maior5/5) - soma_numeriaca(15, maior15, maior15/15)
+    print soma_numerica(3, maior3, maior3/3) + soma_numerica(5, maior5, maior5/5) - soma_numerica(15, maior15, maior15/15)
 
     return 0
 
