@@ -35,17 +35,14 @@
 #  hundred natural numbers and the square of the sum.
 
 
-def get_term(n):
-    if n <= 1:
-        return
-    else:
-        return get_term(n-1) + (2*n - 1)
-
+def sum_numbers(first, last, interval):
+    return ((first + last) * interval)/2
 
 
 def main():
-    for i in range(1, 11):
-        print get_term(i)
+    sum1 = [x * x for x in range(1, 101)]
+    sum2 = sum_numbers(1, 100, 100) ** 2
+    print sum2, " - ", sum(sum1), " = ", sum2 - sum(sum1)
     return 0
 
 if __name__ == '__main__':
