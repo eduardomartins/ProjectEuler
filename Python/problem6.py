@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  problem4.py
+#  problem6.py
 #
 #  Copyright 2017 Eduardo Sant'Anna Martins <eduardo@eduardomartins.site>
 #

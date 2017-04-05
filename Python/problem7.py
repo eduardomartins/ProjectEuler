@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  problem4.py
+#  problem7.py
 #
 #  Copyright 2017 Eduardo Sant'Anna Martins <eduardo@eduardomartins.site>
 #
@@ -21,11 +21,37 @@
 #  MA 02110-1301, USA.
 #
 #  ==========================================================
-# 
+#  10001st prime
+#   By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th
+#   prime is 13. What is the 10 001st prime number?
+
+def prime(n):
+    count = 1
+    primes = [2, ]
+    is_prime = True
+    num = 3
+
+    while(count < n):
+        for prime in primes:
+            if num % prime == 0:
+                is_prime = False
+                break
+
+        if is_prime:
+            primes.append(num)
+            count += 1
+        else:
+            is_prime = True
+
+        num += 1
+
+    return primes[-1]
+
 
 
 def main():
-    pass
+    result = prime(10001)
+    print result
 
 
 if __name__ == '__main__':
