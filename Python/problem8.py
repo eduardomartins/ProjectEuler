@@ -71,30 +71,6 @@ DIGITS = '\
 05886116467109405077541002256983155200055935729725\
 71636269561882670428252483600823257530420752963450'
 
-import numpy
-
-def media_ponderada(list_n):
-    m = {
-        0: 0,
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-        6: 0,
-        7: 0,
-        8: 0,
-        9: 0,
-    }
-
-    for num in list_n:
-        m[num] += 1
-
-    r = 0.0
-    for num, qtd in m.items():
-        r += num * qtd
-
-    return r/sum(m.values())
 
 
 def mul(list_n):
@@ -118,20 +94,15 @@ def problem():
         final += 1
 
     splited.sort()
-    #print splited
-    result = []
+    result = 0
     for greatest in splited:
-        #greatest = splited[-1]
-        tint = [int(num) for num in greatest]
-        result.append((11.0 - numpy.var(tint), greatest, mul(tint)))
-        #print greatest, ' -> ', mul(tint), sum(tint), numpy.var(tint)
-
-    result.sort()
-    for r in result:
-        print r
+        m = mul([int(num) for num in greatest])
+        if m > result:
+            result = m
+    return result
 
 def main():
-    problem()
+    print problem()
 
 
 if __name__ == '__main__':
