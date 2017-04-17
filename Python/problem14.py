@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  problem12.py
+#  problem14.py
 #
 #  Copyright 2017 Eduardo Sant'Anna Martins <eduardo@eduardomartins.site>
 #
@@ -62,7 +62,7 @@ def main():
             largest = count
             number = n
         n += 1
-        
+
     print 'LARGEST', largest, number
 
 
