@@ -45,6 +45,7 @@ from decimal import Decimal, getcontext
 comp = re.compile("(?:0.0*)(\d+)")
 getcontext().prec = 2048
 
+
 def get_pattern(string):
     formated = ''.join(comp.findall(string))
     slice = ''
